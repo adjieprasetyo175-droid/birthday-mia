@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday Mia Sayangg ❤️</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Segoe UI", sans-serif;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            color: white;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .heart {
+            font-size: 70px;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        h1 {
+            font-size: 42px;
+            margin-top: 20px;
+        }
+
+        h2 {
+            margin-top: 10px;
+            font-weight: normal;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.18);
+            backdrop-filter: blur(10px);
+            border-radius: 25px;
+            padding: 30px;
+            margin-top: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+
+        .photo {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 20px;
+            margin: 20px auto;
+            display: block;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+        }
+
+        .message {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-top: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 30px;
+            background: white;
+            color: #ff4f81;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .footer {
+            margin-top: 50px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .music {
+            margin-top: 25px;
+        }
+
+        audio {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 32px;
+            }
+
+            .heart {
+                font-size: 55px;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+            .message {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="heart">❤️</div>
+
+        <h1>Happy Birthday, Mia Sayangg!</h1>
+
+        <h2>Selamat ulang tahun yang ke-26 🎂</h2>
+
+        <div class="card">
+
+            <!-- FOTO UTAMA -->
+            <img src="foto1.jpg" class="photo" alt="Foto Aji dan Mia">
+
+            <div class="message">
+
+                <p>
+                    Untuk seseorang yang begitu berarti dalam hidupku,
+                    <br><br>
+
+                    Selamat ulang tahun, Sayangkuu. ❤️
+                    <br><br>
+
+                    Hari ini adalah hari spesial karena 26 tahun yang lalu
+                    lahir seseorang yang kemudian menjadi bagian penting
+                    dalam perjalanan hidupku.
+                    <br><br>
+
+                    Terima kasih sudah hadir, sudah menemani,
+                    sudah berbagi cerita, tawa, dan banyak hal
+                    yang membuat perjalanan kita menjadi lebih berarti.
+                    <br><br>
+
+                    Semoga di usia yang Ke-26 tahun ini,
+                    semua hal baik datang kepadamu.
+                    Semoga langkahmu semakin ringan,
+                    impianmu satu per satu menjadi nyata,
+                    dan kamu selalu diberikan kesehatan,
+                    kebahagiaan, serta ketenangan.
+                    <br><br>
+
+                    Saya berharap kita bisa terus membuat
+                    banyak cerita indah bersama.
+                    <br><br>
+
+                    Happy birthday, Sayangg.
+                    ❤️
+                    <br><br>
+
+                    From,
+                    <br>
+                    <strong>Aji</strong>
+                </p>
+
+            </div>
+
+            <!-- MUSIK -->
+            <div class="music">
+
+                <p>🎵 Lagu untukmu</p>
+
+                <audio controls>
+                    <source src="lagu.mp3" type="audio/mpeg">
+                    Browser kamu tidak mendukung pemutar musik.
+                </audio>
+
+            </div>
+
+            <button class="button" onclick="showMessage()">
+                💌 Ada sesuatu untukmu
+            </button>
+
+            <div id="secret" class="hidden">
+
+                <br><br>
+
+                <h2>❤️</h2>
+
+                <p class="message">
+                    Kalau suatu hari nanti kamu membuka halaman ini lagi,
+                    semoga kamu masih tersenyum ketika mengingat
+                    semua cerita yang pernah kita lewati bersama.
+                    <br><br>
+                    Terima kasih sudah menjadi bagian dari ceritaku.
+                    ❤️
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="footer">
+            Made with ❤️ by Aji
+        </div>
+
+    </div>
+
+    <script>
+
+        function showMessage() {
+
+            const secret = document.getElementById("secret");
+
+            secret.classList.remove("hidden");
+
+        }
+
+    </script>
+
+</body>
+</html>
