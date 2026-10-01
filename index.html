@@ -1,245 +1,269 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Mia ❤️</title>
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;font-family:Georgia,"Times New Roman",serif;
+  background:#120b12;color:#fff;overflow-x:hidden
+}
+section{
+  min-height:100vh;display:flex;align-items:center;justify-content:center;
+  padding:55px 22px;position:relative;text-align:center;
+}
+.bg{
+  position:fixed;inset:0;z-index:-2;
+  background:
+    radial-gradient(circle at 20% 20%,rgba(255,120,170,.20),transparent 30%),
+    radial-gradient(circle at 80% 70%,rgba(180,90,150,.16),transparent 32%),
+    linear-gradient(135deg,#180d18,#080609);
+}
+.stars{position:fixed;inset:0;z-index:-1;pointer-events:none}
+.star{position:absolute;width:3px;height:3px;background:#fff;border-radius:50%;opacity:.55;animation:twinkle 3s infinite}
+@keyframes twinkle{50%{opacity:.12;transform:scale(.5)}}
 
-    <title>Happy Birthday Mia Sayangg ❤️</title>
+.card{max-width:760px;width:100%;padding:20px}
+.small{letter-spacing:4px;text-transform:uppercase;font-size:12px;opacity:.7}
+h1{font-size:clamp(42px,11vw,82px);margin:18px 0 8px;font-weight:normal}
+h2{font-size:clamp(30px,7vw,52px);font-weight:normal;margin:10px 0 24px}
+p{font-size:18px;line-height:1.9;color:#f5e9ef}
+.heart{font-size:45px;animation:pulse 1.5s infinite}
+@keyframes pulse{50%{transform:scale(1.15)}}
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+button{
+  border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.08);
+  color:white;padding:14px 28px;border-radius:999px;font-size:15px;
+  cursor:pointer;backdrop-filter:blur(8px);transition:.3s
+}
+button:hover{background:rgba(255,255,255,.18);transform:translateY(-2px)}
 
-        body {
-            font-family: "Segoe UI", sans-serif;
-            background: linear-gradient(135deg, #ff758c, #ff7eb3);
-            color: white;
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
+.fade{opacity:0;transform:translateY(25px);transition:1s}
+.fade.show{opacity:1;transform:none}
 
-        .container {
-            width: 90%;
-            max-width: 800px;
-            margin: auto;
-            text-align: center;
-            padding: 60px 20px;
-        }
+.photo-grid{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:30px 0
+}
+.photo{
+  aspect-ratio:1/1;border-radius:20px;overflow:hidden;
+  border:1px solid rgba(255,255,255,.16);
+  background:linear-gradient(135deg,#35202f,#1c111b);
+  display:flex;align-items:center;justify-content:center;color:#d9b9c8;
+  font-size:14px;letter-spacing:1px
+}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
 
-        .heart {
-            font-size: 70px;
-            animation: heartbeat 1.5s infinite;
-        }
+.quote{
+  border-left:2px solid #d889a9;padding:8px 0 8px 22px;
+  text-align:left;font-style:italic;margin:30px auto;max-width:620px
+}
+.timeline{margin-top:35px;text-align:left}
+.item{display:flex;gap:18px;margin:25px 0}
+.dot{min-width:12px;height:12px;border-radius:50%;background:#e69ab8;margin-top:9px;box-shadow:0 0 15px #e69ab8}
+.item h3{margin:0 0 5px;font-size:20px;font-weight:normal}
+.item p{margin:0;font-size:16px}
 
-        @keyframes heartbeat {
-            0%, 100% {
-                transform: scale(1);
-            }
+.final{
+  background:radial-gradient(circle,rgba(190,70,120,.15),transparent 55%)
+}
+.signature{font-size:20px;margin-top:35px}
+.music{
+  position:fixed;right:16px;bottom:16px;z-index:10;
+  width:48px;height:48px;padding:0;font-size:19px
+}
+.note{font-size:12px;opacity:.55;margin-top:20px}
 
-            50% {
-                transform: scale(1.2);
-            }
-        }
-
-        h1 {
-            font-size: 42px;
-            margin-top: 20px;
-        }
-
-        h2 {
-            margin-top: 10px;
-            font-weight: normal;
-        }
-
-        .card {
-            background: rgba(255,255,255,0.18);
-            backdrop-filter: blur(10px);
-            border-radius: 25px;
-            padding: 30px;
-            margin-top: 40px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-        }
-
-        .photo {
-            width: 100%;
-            max-width: 500px;
-            border-radius: 20px;
-            margin: 20px auto;
-            display: block;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-        }
-
-        .message {
-            font-size: 18px;
-            line-height: 1.8;
-            margin-top: 20px;
-        }
-
-        .button {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 15px 30px;
-            background: white;
-            color: #ff4f81;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            cursor: pointer;
-            border: none;
-            font-size: 16px;
-        }
-
-        .hidden {
-            display: none;
-        }
-
-        .footer {
-            margin-top: 50px;
-            font-size: 14px;
-            opacity: 0.8;
-        }
-
-        .music {
-            margin-top: 25px;
-        }
-
-        audio {
-            width: 100%;
-            max-width: 400px;
-        }
-
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 32px;
-            }
-
-            .heart {
-                font-size: 55px;
-            }
-
-            .card {
-                padding: 20px;
-            }
-
-            .message {
-                font-size: 16px;
-            }
-        }
-    </style>
+@media(max-width:520px){
+ .photo-grid{grid-template-columns:1fr 1fr;gap:9px}
+ p{font-size:17px}
+}
+</style>
 </head>
-
 <body>
+<div class="bg"></div><div class="stars" id="stars"></div>
 
-    <div class="container">
+<button class="music" id="musicBtn" title="Putar musik">♫</button>
+<audio id="music" loop>
+  <!-- Letakkan file musik bernama melamarmu.mp3 di folder yang sama -->
+  <source src="melamarmu.mp3" type="audio/mpeg">
+</audio>
 
-        <div class="heart">❤️</div>
+<section>
+ <div class="card fade">
+   <div class="small">A little something for you</div>
+   <div class="heart">♡</div>
+   <h1>Untuk Mia</h1>
+   <p>Ada satu hal yang ingin Ku sampaikan<br>di hari yang spesial ini.</p>
+   <button onclick="document.querySelector('#birthday').scrollIntoView()">Buka ❤️</button>
+ </div>
+</section>
 
-        <h1>Happy Birthday, Mia Sayangg!</h1>
+<section id="birthday">
+ <div class="card fade">
+   <div class="small">02 October / 2026</div>
+   <h2>Happy 26th Birthday,<br>Mia Sayang❤️</h2>
+   <p>
+     Selamat bertambah usia, sayang.<br>
+     Semoga umur yang baru ini membawa lebih banyak
+     bahagia, ketenangan, rezeki, dan hal-hal baik yang kita doakan.
+   </p>
+ </div>
+</section>
 
-        <h2>Selamat ulang tahun yang ke-26 🎂</h2>
+<section>
+ <div class="card fade">
+   <div class="small">Six little memories</div>
+   <h2>Tentang kita</h2>
+   <div class="photo-grid">
+     <div class="photo"><img src="foto1.jpg" alt="Kenangan 1"></div>
+     <div class="photo"><img src="foto2.jpg" alt="Kenangan 2"></div>
+     <div class="photo"><img src="foto3.jpg" alt="Kenangan 3"></div>
+     <div class="photo"><img src="foto4.jpg" alt="Kenangan 4"></div>
+     <div class="photo"><img src="foto5.jpg" alt="Kenangan 5"></div>
+     <div class="photo"><img src="foto6.jpg" alt="Kenangan 6"></div>
+   </div>
+ </div>
+</section>
 
-        <div class="card">
+<section>
+ <div class="card fade">
+   <div class="small">What I love about you</div>
+   <h2>Aku suka kamu,<br>karena kamu adalah kamu.</h2>
+   <p>
+     Aku suka kamu yang periang.<br>
+     Aku suka senyum manismu.<br>
+     Aku suka suara tawamu yang sederhana,
+     tapi entah kenapa bisa membuat hariku ikut terasa lebih ringan.<br>
+     Aku suka kelembutan hatimu.<br>
+     Dan iya... aku suka apa adanya kamu. 🤍
+   </p>
+ </div>
+</section>
 
-            <!-- FOTO UTAMA -->
-            <img src="foto1.jpg" class="photo" alt="Foto Aji dan Mia">
+<section>
+ <div class="card fade">
+   <div class="small">One of my favorite memories</div>
+   <h2>Jembatan itu.</h2>
+   <div class="quote">
+     Mungkin bagi orang lain itu cuma sebuah jembatan penyeberangan.
+     Tapi buat aku, ada satu kenangan yang tinggal di sana.
+   </div>
+   <p>
+     Kita berjalan berdua, bergandengan tangan,
+     di tengah teriknya matahari.
+     Tidak ada sesuatu yang terlalu mewah.
+     Tidak ada tempat yang istimewa.
+     Tapi saat itu aku merasa,
+     berjalan bersamamu saja sudah cukup membuat semuanya terasa istimewa.
+   </p>
+ </div>
+</section>
 
-            <div class="message">
+<section>
+ <div class="card fade">
+   <div class="small">Our little story</div>
+   <h2>15 Oktober 2025 ❤️</h2>
+   <div class="timeline">
+     <div class="item">
+       <div class="dot"></div>
+       <div><h3>Awal cerita</h3><p>Dua orang bertemu, lalu perlahan menjadi dua orang yang saling berarti.</p></div>
+     </div>
+     <div class="item">
+       <div class="dot"></div>
+       <div><h3>Hampir satu tahun</h3><p>Banyak tawa, banyak cerita, dan tentu saja beberapa hal yang membuat kita belajar memahami satu sama lain.</p></div>
+     </div>
+     <div class="item">
+       <div class="dot"></div>
+       <div><h3>Dan semoga...</h3><p>Ini bukan sekadar cerita selama satu tahun. Semoga menjadi awal dari perjalanan yang jauh lebih panjang.</p></div>
+     </div>
+   </div>
+ </div>
+</section>
 
-                <p>
-                    Untuk seseorang yang begitu berarti dalam hidupku,
-                    <br><br>
+<section>
+ <div class="card fade">
+   <div class="small">My wish for you</div>
+   <h2>Untuk umurmu yang ke-26</h2>
+   <p>
+     Semoga kamu selalu punya alasan untuk tersenyum.<br>
+     Semoga apa yang sedang kamu perjuangkan menemukan jalannya.<br>
+     Semoga langkahmu dimudahkan, hatimu ditenangkan,
+     dan kamu selalu dikelilingi orang-orang yang benar-benar menyayangimu.
+   </p>
+   <p>
+     Dan di antara semua doa baik untukmu,
+     aku punya satu doa yang sedikit egois...
+   </p>
+ </div>
+</section>
 
-                    Selamat ulang tahun, Sayangkuu. ❤️
-                    <br><br>
+<section>
+ <div class="card fade">
+   <div class="small">My selfish little wish</div>
+   <h2>Aku ingin kita sampai.</h2>
+   <p>
+     Bukan cuma sampai anniversary berikutnya.<br>
+     Bukan cuma sampai tahun depan.
+   </p>
+   <p>
+     Aku ingin kita terus berjalan,
+     belajar saling memahami,
+     melewati hari-hari baik dan kurang baik,
+     sampai akhirnya kita benar-benar bersatu.
+   </p>
+   <p>
+     Kalau suatu hari nanti kita melihat kembali halaman ini,
+     semoga kita bisa tersenyum dan berkata:
+     <br><br><i>“Ternyata kita benar-benar sampai.”</i>
+   </p>
+ </div>
+</section>
 
-                    Hari ini adalah hari spesial karena 26 tahun yang lalu
-                    lahir seseorang yang kemudian menjadi bagian penting
-                    dalam perjalanan hidupku.
-                    <br><br>
+<section class="final">
+ <div class="card fade">
+   <div class="heart">❤️</div>
+   <h2>Happy Birthday, Sry Rusmia. Happy Birthday Sayangkuu.</h2>
+   <p>
+     Terima kasih sudah hadir di hidup Ku.<br>
+     Terima kasih untuk senyum, tawa, kelembutan,
+     dan semua hal kecil yang membuatmu menjadi Mia.
+   </p>
+   <p>
+     Semoga di umur 26 ini kamu semakin bahagia.
+     Dan semoga Aku masih menjadi seseorang
+     yang bisa menemani kamu menciptakan banyak cerita setelah ini.
+   </p>
+   <div class="signature">With love,<br><b>Aji</b> 🤍</div>
+   <p class="note">15.10.2025 • and hopefully, for a very long time.</p>
+ </div>
+</section>
 
-                    Terima kasih sudah hadir, sudah menemani,
-                    sudah berbagi cerita, tawa, dan banyak hal
-                    yang membuat perjalanan kita menjadi lebih berarti.
-                    <br><br>
+<script>
+const stars=document.getElementById('stars');
+for(let i=0;i<55;i++){
+  const s=document.createElement('span');
+  s.className='star';
+  s.style.left=Math.random()*100+'%';
+  s.style.top=Math.random()*100+'%';
+  s.style.animationDelay=Math.random()*3+'s';
+  stars.appendChild(s);
+}
+const observer=new IntersectionObserver(entries=>{
+ entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')})
+},{threshold:.15});
+document.querySelectorAll('.fade').forEach(el=>observer.observe(el));
 
-                    Semoga di usia yang Ke-26 tahun ini,
-                    semua hal baik datang kepadamu.
-                    Semoga langkahmu semakin ringan,
-                    impianmu satu per satu menjadi nyata,
-                    dan kamu selalu diberikan kesehatan,
-                    kebahagiaan, serta ketenangan.
-                    <br><br>
-
-                    Saya berharap kita bisa terus membuat
-                    banyak cerita indah bersama.
-                    <br><br>
-
-                    Happy birthday, Sayangg.
-                    ❤️
-                    <br><br>
-
-                    From,
-                    <br>
-                    <strong>Aji</strong>
-                </p>
-
-            </div>
-
-            <!-- MUSIK -->
-            <div class="music">
-
-                <p>🎵 Lagu untukmu</p>
-
-                <audio controls>
-                    <source src="lagu.mp3" type="audio/mpeg">
-                    Browser kamu tidak mendukung pemutar musik.
-                </audio>
-
-            </div>
-
-            <button class="button" onclick="showMessage()">
-                💌 Ada sesuatu untukmu
-            </button>
-
-            <div id="secret" class="hidden">
-
-                <br><br>
-
-                <h2>❤️</h2>
-
-                <p class="message">
-                    Kalau suatu hari nanti kamu membuka halaman ini lagi,
-                    semoga kamu masih tersenyum ketika mengingat
-                    semua cerita yang pernah kita lewati bersama.
-                    <br><br>
-                    Terima kasih sudah menjadi bagian dari ceritaku.
-                    ❤️
-                </p>
-
-            </div>
-
-        </div>
-
-        <div class="footer">
-            Made with ❤️ by Aji
-        </div>
-
-    </div>
-
-    <script>
-
-        function showMessage() {
-
-            const secret = document.getElementById("secret");
-
-            secret.classList.remove("hidden");
-
-        }
-
-    </script>
-
+const audio=document.getElementById('music');
+const btn=document.getElementById('musicBtn');
+btn.onclick=async()=>{
+ try{
+   if(audio.paused){await audio.play();btn.textContent='❚❚'}
+   else{audio.pause();btn.textContent='♫'}
+ }catch(e){alert('Pastikan file melamarmu.mp3 sudah ada di folder website.')}
+};
+</script>
 </body>
 </html>
